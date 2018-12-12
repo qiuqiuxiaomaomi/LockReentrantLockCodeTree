@@ -51,3 +51,19 @@ synchronized的缺陷
                  自动会让线程释放对锁的占用；而Lock则必须要用户手动去释放锁，如果没有
                  主动释放锁，就有可能导致出现死锁。
 </pre>
+
+ReentrantLock公平锁加锁
+
+![](https://i.imgur.com/hTNd8j0.png)
+
+ReentrantLock非公平锁加锁
+
+![](https://i.imgur.com/GQWrrWa.png)
+
+<pre>
+ReentrantLock：
+
+      两种锁：
+            nonfairTryAcquire 非公平锁
+            fairTryAcquire 公平锁
+</pre>
