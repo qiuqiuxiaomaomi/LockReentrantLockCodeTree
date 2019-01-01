@@ -78,3 +78,6 @@ ReentrantLock：
 非公平锁：
       在等待锁的过程中， 如果有任意新的线程妄图获取锁，都是有很大的几率直接获取到锁的。
 </pre>
+
+Java中的公平锁和非公平锁实现详解
+https://blog.csdn.net/qyp199312/article/details/70598480
