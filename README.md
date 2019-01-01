@@ -67,3 +67,14 @@ ReentrantLock：
             nonfairTryAcquire 非公平锁
             fairTryAcquire 公平锁
 </pre>
+
+<pre>
+公平锁：
+     公平和非公平锁的队列都基于锁内部维护的一个双向链表，表结点Node的值就是每一个请求当前锁的线程。公平锁则在于每次都是依次从队首取值。
+     
+锁的实现方式是基于如下几点： 
+     表结点Node和状态state的volatile关键字。
+     sum.misc.Unsafe.compareAndSet的原子操作(见附录)。
+非公平锁：
+      在等待锁的过程中， 如果有任意新的线程妄图获取锁，都是有很大的几率直接获取到锁的。
+</pre>
